@@ -1,6 +1,7 @@
 #!/bin/bash
 
-CONFIG_FILE="servers.json"
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+CONFIG_FILE="$SCRIPT_DIR/servers.json"
 
 # Check if the configuration file exists
 if [ ! -f "$CONFIG_FILE" ]; then
